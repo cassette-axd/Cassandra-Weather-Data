@@ -20,26 +20,26 @@ class Station(station_pb2_grpc.StationServicer):
             self.cass.execute(insert_statement, (request.station, f"{year}-{month}-{day}", request.tmin, request.tmax))
             return station_pb2.RecordTempsReply(error = "")
         except cassandra.Unavailable as e1:
-            return station_pb2.RecordTempsReply(error = f"need {e1.required_replicas} replicas, but onlly have {e1.alive_replicas}")
+            return station_pb2.RecordTempsReply(error = f"need {e1.required_replicas} replicas, but only have {e1.alive_replicas}")
         except NoHostAvailable as e2:
             for err in e.errors:
                 if (err==cassandra.Unavailable):
-                    return station_pb2.RecordTempsReply(error = f"need {err.required_replicas} replicas, but onlly have {err.alive_replicas}")
+                    return station_pb2.RecordTempsReply(error = f"need {err.required_replicas} replicas, but only have {err.alive_replicas}")
         except Exception as e:
             return station_pb2.RecordTempsReply(error = "RecordTemps() failed")
   
     def StationMax(self, request, context):
         try:
             max_statement = self.cass.prepare("SELECT record.tmax from weather.stations WHERE id=?")
-            self.cass.execute(max_statement, (request.station,))
+            tmaxVal = self.cass.execute(max_statement, (request.station,))
             max_statement.consistency_level = ConsistencyLevel.THREE
-            return station_pb2.StationMaxReply(error = "")
+            return station_pb2.StationMaxReply(tmax = tmaxVal, error = "")
         except cassandra.Unavailable as e1:
-            return station_pb2.StationMaxReply(error = f"need {e1.required_replicas} replicas, but onlly have {e1.alive_replicas}")
+            return station_pb2.StationMaxReply(error = f"need {e1.required_replicas} replicas, but only have {e1.alive_replicas}")
         except NoHostAvailable as e2:
             for err in e.errors:
                 if (err==cassandra.Unavailable):
-                    return station_pb2.StationMaxReply(error = f"need {err.required_replicas} replicas, but onlly have {err.alive_replicas}")
+                    return station_pb2.StationMaxReply(error = f"need {err.required_replicas} replicas, but only have {err.alive_replicas}")
         except Exception as e:
             return station_pb2.StationMaxReply(error = "StationMax() failed")
 
