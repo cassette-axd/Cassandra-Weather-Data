@@ -46,10 +46,17 @@ class Station(station_pb2_grpc.StationServicer):
 # Server Code
 import grpc
 from concurrent import futures
-if __name__ == "__main__":
-    server = grpc.server(futures.ThreadPoolExecutor(max_workers=4), options=(('grpc.so_reuseport', 0),))
-    station_pb2_grpc.add_StationServicer_to_server(Station(), server)
-    server.add_insecure_port("[::]:5440", )
-    server.start()
-    print("started")
-    server.wait_for_termination()
+#if __name__ == "__main__":
+#    server = grpc.server(futures.ThreadPoolExecutor(max_workers=4), options=(('grpc.so_reuseport', 0),))
+#    station_pb2_grpc.add_StationServicer_to_server(Station(), server)
+#    server.add_insecure_port("0.0.0.0:5440", )
+#    server.start()
+#    print("started")
+#    server.wait_for_termination()
+
+server = grpc.server(futures.ThreadPoolExecutor(max_workers=4), options=(('grpc.so_reuseport', 0),))
+station_pb2_grpc.add_StationServicer_to_server(Station(), server)
+server.add_insecure_port("0.0.0.0:5440", )
+server.start()
+print("started")
+server.wait_for_termination()
