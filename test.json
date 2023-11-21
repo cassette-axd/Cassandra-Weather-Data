@@ -1,12 +1,12 @@
 {
-  "score": 40,
+  "score": 50,
   "full_score": 100,
   "tests": {
     "q1": "PASS (10/10)",
     "q2": "PASS (10/10)",
     "q3": "PASS (10/10)",
     "q4": "PASS (10/10)",
-    "q5": "Couldn't find cell with txt #q5",
+    "q5": "PASS (10/10)",
     "q6": "Couldn't find cell with txt #q6",
     "q7": "Couldn't find cell with txt #q7",
     "q8": "Couldn't find cell with txt #q8",

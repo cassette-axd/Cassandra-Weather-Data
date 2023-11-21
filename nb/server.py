@@ -2,7 +2,9 @@ import threading
 import station_pb2_grpc, station_pb2
 import traceback
 from cassandra import ConsistencyLevel
+import cassandra
 from cassandra.cluster import Cluster
+import pandas as pd
 
 class Station(station_pb2_grpc.StationServicer):
     def __init__(self):
@@ -12,7 +14,7 @@ class Station(station_pb2_grpc.StationServicer):
     
     def RecordTemps(self, request, context):
         try:
-            insert_statement = self.cass.prepare("INSERT INTO stations (id, date, record) VALUES (?, ?, {tmin: ?, tmax: ?})")
+            insert_statement = self.cass.prepare("INSERT INTO weather.stations (id, date, record) VALUES (?, ?, {tmin: ?, tmax: ?})")
             insert_statement.consistency_level = ConsistencyLevel.ONE
             year = request.date[0:4]
             month = request.date[4:6]
@@ -21,27 +23,31 @@ class Station(station_pb2_grpc.StationServicer):
             return station_pb2.RecordTempsReply(error = "")
         except cassandra.Unavailable as e1:
             return station_pb2.RecordTempsReply(error = f"need {e1.required_replicas} replicas, but only have {e1.alive_replicas}")
-        except NoHostAvailable as e2:
+        except cassandra.cluster.NoHostAvailable as e2:
             for err in e.errors:
                 if (err==cassandra.Unavailable):
                     return station_pb2.RecordTempsReply(error = f"need {err.required_replicas} replicas, but only have {err.alive_replicas}")
         except Exception as e:
-            return station_pb2.RecordTempsReply(error = "RecordTemps() failed")
+            return station_pb2.RecordTempsReply(error = e)
   
     def StationMax(self, request, context):
         try:
             max_statement = self.cass.prepare("SELECT record.tmax from weather.stations WHERE id=?")
-            tmaxVal = self.cass.execute(max_statement, (request.station,))
+            df = pd.DataFrame(self.cass.execute(max_statement, (request.station,)))
+            tmaxVal = float('-inf')
+            for index, row in df.iterrows():
+                if row["record_tmax"] > tmaxVal:
+                    tmaxVal = row["record_tmax"]
             max_statement.consistency_level = ConsistencyLevel.THREE
             return station_pb2.StationMaxReply(tmax = tmaxVal, error = "")
         except cassandra.Unavailable as e1:
             return station_pb2.StationMaxReply(error = f"need {e1.required_replicas} replicas, but only have {e1.alive_replicas}")
-        except NoHostAvailable as e2:
+        except cassandra.cluster.NoHostAvailable as e2:
             for err in e.errors:
                 if (err==cassandra.Unavailable):
                     return station_pb2.StationMaxReply(error = f"need {err.required_replicas} replicas, but only have {err.alive_replicas}")
         except Exception as e:
-            return station_pb2.StationMaxReply(error = "StationMax() failed")
+            return station_pb2.StationMaxReply(error = e)
 
 # Server Code
 import grpc
