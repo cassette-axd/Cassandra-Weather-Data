@@ -33,12 +33,12 @@ class Station(station_pb2_grpc.StationServicer):
     def StationMax(self, request, context):
         try:
             max_statement = self.cass.prepare("SELECT record.tmax from weather.stations WHERE id=?")
+            max_statement.consistency_level = ConsistencyLevel.THREE
             df = pd.DataFrame(self.cass.execute(max_statement, (request.station,)))
             tmaxVal = float('-inf')
             for index, row in df.iterrows():
                 if row["record_tmax"] > tmaxVal:
                     tmaxVal = row["record_tmax"]
-            max_statement.consistency_level = ConsistencyLevel.THREE
             return station_pb2.StationMaxReply(tmax = tmaxVal, error = "")
         except cassandra.Unavailable as e1:
             return station_pb2.StationMaxReply(error = f"need {e1.required_replicas} replicas, but only have {e1.alive_replicas}")

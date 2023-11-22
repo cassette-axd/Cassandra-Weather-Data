@@ -9,7 +9,7 @@ Running cell 5
 Ivy Default Cache set to: /root/.ivy2/cache
 The jars for the packages stored in: /root/.ivy2/jars
 com.datastax.spark#spark-cassandra-connector_2.12 added as a dependency
-:: resolving dependencies :: org.apache.spark#spark-submit-parent-19c51744-5b5b-4198-bd17-3033d8716667;1.0
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-2fb22293-1616-40c1-b3bd-ed6225e10241;1.0
 	confs: [default]
 	found com.datastax.spark#spark-cassandra-connector_2.12;3.4.0 in central
 	found com.datastax.spark#spark-cassandra-connector-driver_2.12;3.4.0 in central
@@ -30,42 +30,42 @@ com.datastax.spark#spark-cassandra-connector_2.12 added as a dependency
 	found com.thoughtworks.paranamer#paranamer;2.8 in central
 	found org.scala-lang#scala-reflect;2.12.11 in central
 downloading https://repo1.maven.org/maven2/com/datastax/spark/spark-cassandra-connector_2.12/3.4.0/spark-cassandra-connector_2.12-3.4.0.jar ...
-	[SUCCESSFUL ] com.datastax.spark#spark-cassandra-connector_2.12;3.4.0!spark-cassandra-connector_2.12.jar (137ms)
+	[SUCCESSFUL ] com.datastax.spark#spark-cassandra-connector_2.12;3.4.0!spark-cassandra-connector_2.12.jar (154ms)
 downloading https://repo1.maven.org/maven2/com/datastax/spark/spark-cassandra-connector-driver_2.12/3.4.0/spark-cassandra-connector-driver_2.12-3.4.0.jar ...
-	[SUCCESSFUL ] com.datastax.spark#spark-cassandra-connector-driver_2.12;3.4.0!spark-cassandra-connector-driver_2.12.jar (76ms)
+	[SUCCESSFUL ] com.datastax.spark#spark-cassandra-connector-driver_2.12;3.4.0!spark-cassandra-connector-driver_2.12.jar (111ms)
 downloading https://repo1.maven.org/maven2/com/datastax/oss/java-driver-core-shaded/4.13.0/java-driver-core-shaded-4.13.0.jar ...
-	[SUCCESSFUL ] com.datastax.oss#java-driver-core-shaded;4.13.0!java-driver-core-shaded.jar (339ms)
+	[SUCCESSFUL ] com.datastax.oss#java-driver-core-shaded;4.13.0!java-driver-core-shaded.jar (369ms)
 downloading https://repo1.maven.org/maven2/com/datastax/oss/java-driver-mapper-runtime/4.13.0/java-driver-mapper-runtime-4.13.0.jar ...
-	[SUCCESSFUL ] com.datastax.oss#java-driver-mapper-runtime;4.13.0!java-driver-mapper-runtime.jar(bundle) (31ms)
+	[SUCCESSFUL ] com.datastax.oss#java-driver-mapper-runtime;4.13.0!java-driver-mapper-runtime.jar(bundle) (29ms)
 downloading https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.10/commons-lang3-3.10.jar ...
-	[SUCCESSFUL ] org.apache.commons#commons-lang3;3.10!commons-lang3.jar (51ms)
+	[SUCCESSFUL ] org.apache.commons#commons-lang3;3.10!commons-lang3.jar (53ms)
 downloading https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar ...
 	[SUCCESSFUL ] com.thoughtworks.paranamer#paranamer;2.8!paranamer.jar(bundle) (27ms)
 downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.11/scala-reflect-2.12.11.jar ...
-	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.12.11!scala-reflect.jar (143ms)
+	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.12.11!scala-reflect.jar (141ms)
 downloading https://repo1.maven.org/maven2/com/datastax/oss/native-protocol/1.5.0/native-protocol-1.5.0.jar ...
-	[SUCCESSFUL ] com.datastax.oss#native-protocol;1.5.0!native-protocol.jar(bundle) (37ms)
+	[SUCCESSFUL ] com.datastax.oss#native-protocol;1.5.0!native-protocol.jar(bundle) (36ms)
 downloading https://repo1.maven.org/maven2/com/datastax/oss/java-driver-shaded-guava/25.1-jre-graal-sub-1/java-driver-shaded-guava-25.1-jre-graal-sub-1.jar ...
-	[SUCCESSFUL ] com.datastax.oss#java-driver-shaded-guava;25.1-jre-graal-sub-1!java-driver-shaded-guava.jar (101ms)
+	[SUCCESSFUL ] com.datastax.oss#java-driver-shaded-guava;25.1-jre-graal-sub-1!java-driver-shaded-guava.jar (102ms)
 downloading https://repo1.maven.org/maven2/com/typesafe/config/1.4.1/config-1.4.1.jar ...
-	[SUCCESSFUL ] com.typesafe#config;1.4.1!config.jar(bundle) (33ms)
+	[SUCCESSFUL ] com.typesafe#config;1.4.1!config.jar(bundle) (29ms)
 downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar ...
-	[SUCCESSFUL ] org.slf4j#slf4j-api;1.7.26!slf4j-api.jar (29ms)
+	[SUCCESSFUL ] org.slf4j#slf4j-api;1.7.26!slf4j-api.jar (26ms)
 downloading https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-core/4.1.18/metrics-core-4.1.18.jar ...
-	[SUCCESSFUL ] io.dropwizard.metrics#metrics-core;4.1.18!metrics-core.jar(bundle) (32ms)
+	[SUCCESSFUL ] io.dropwizard.metrics#metrics-core;4.1.18!metrics-core.jar(bundle) (28ms)
 downloading https://repo1.maven.org/maven2/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar ...
-	[SUCCESSFUL ] org.hdrhistogram#HdrHistogram;2.1.12!HdrHistogram.jar(bundle) (32ms)
+	[SUCCESSFUL ] org.hdrhistogram#HdrHistogram;2.1.12!HdrHistogram.jar(bundle) (29ms)
 downloading https://repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar ...
-	[SUCCESSFUL ] org.reactivestreams#reactive-streams;1.0.3!reactive-streams.jar (30ms)
+	[SUCCESSFUL ] org.reactivestreams#reactive-streams;1.0.3!reactive-streams.jar (27ms)
 downloading https://repo1.maven.org/maven2/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.jar ...
-	[SUCCESSFUL ] com.github.stephenc.jcip#jcip-annotations;1.0-1!jcip-annotations.jar (33ms)
+	[SUCCESSFUL ] com.github.stephenc.jcip#jcip-annotations;1.0-1!jcip-annotations.jar (28ms)
 downloading https://repo1.maven.org/maven2/com/github/spotbugs/spotbugs-annotations/3.1.12/spotbugs-annotations-3.1.12.jar ...
-	[SUCCESSFUL ] com.github.spotbugs#spotbugs-annotations;3.1.12!spotbugs-annotations.jar (29ms)
+	[SUCCESSFUL ] com.github.spotbugs#spotbugs-annotations;3.1.12!spotbugs-annotations.jar (30ms)
 downloading https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar ...
-	[SUCCESSFUL ] com.google.code.findbugs#jsr305;3.0.2!jsr305.jar (26ms)
+	[SUCCESSFUL ] com.google.code.findbugs#jsr305;3.0.2!jsr305.jar (31ms)
 downloading https://repo1.maven.org/maven2/com/datastax/oss/java-driver-query-builder/4.13.0/java-driver-query-builder-4.13.0.jar ...
-	[SUCCESSFUL ] com.datastax.oss#java-driver-query-builder;4.13.0!java-driver-query-builder.jar(bundle) (35ms)
-:: resolution report :: resolve 5631ms :: artifacts dl 1256ms
+	[SUCCESSFUL ] com.datastax.oss#java-driver-query-builder;4.13.0!java-driver-query-builder.jar(bundle) (32ms)
+:: resolution report :: resolve 5417ms :: artifacts dl 1310ms
 	:: modules in use:
 	com.datastax.oss#java-driver-core-shaded;4.13.0 from central in [default]
 	com.datastax.oss#java-driver-mapper-runtime;4.13.0 from central in [default]
@@ -91,14 +91,14 @@ downloading https://repo1.maven.org/maven2/com/datastax/oss/java-driver-query-bu
 	---------------------------------------------------------------------
 	|      default     |   18  |   18  |   18  |   0   ||   18  |   18  |
 	---------------------------------------------------------------------
-:: retrieving :: org.apache.spark#spark-submit-parent-19c51744-5b5b-4198-bd17-3033d8716667
+:: retrieving :: org.apache.spark#spark-submit-parent-2fb22293-1616-40c1-b3bd-ed6225e10241
 	confs: [default]
-	18 artifacts copied, 0 already retrieved (18067kB/120ms)
-23/11/22 05:30:00 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+	18 artifacts copied, 0 already retrieved (18067kB/103ms)
+23/11/22 06:31:57 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 Setting default log level to "WARN".
 To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
 Running cell 6
-[Stage 0:>                                                          (0 + 0) / 2][Stage 0:>                                                          (0 + 2) / 2][Stage 0:>                  (0 + 2) / 2][Stage 1:>                  (0 + 0) / 2][Stage 0:>    (0 + 2) / 2][Stage 1:>    (0 + 0) / 2][Stage 2:>    (0 + 0) / 2][Stage 0:>    (0 + 2) / 2][Stage 1:>    (0 + 1) / 2][Stage 2:>    (0 + 0) / 2][Stage 1:>                  (0 + 2) / 2][Stage 2:>                  (0 + 0) / 2][Stage 1:>                  (0 + 2) / 2][Stage 2:>                  (0 + 1) / 2][Stage 2:>                                                          (0 + 2) / 2][Stage 4:>                                                          (0 + 1) / 1]                                                                                Running cell 7
+[Stage 0:>                                                          (0 + 0) / 2][Stage 0:>                                                          (0 + 2) / 2][Stage 0:>    (0 + 2) / 2][Stage 1:>    (0 + 0) / 2][Stage 2:>    (0 + 0) / 2][Stage 1:>                  (0 + 2) / 2][Stage 2:>                  (0 + 0) / 2][Stage 1:=========>         (1 + 1) / 2][Stage 2:>                  (0 + 1) / 2][Stage 2:>                                                          (0 + 2) / 2][Stage 2:=============================>                             (1 + 1) / 2][Stage 4:>                                                          (0 + 1) / 1]                                                                                Running cell 7
 Running cell 8
 Running cell 9
 Running cell 10
@@ -108,54 +108,21 @@ File autograder_result/q4.cell has been removed
 Running cell 11
 Running cell 12
 Running cell 13
-[Stage 9:>                                                          (0 + 1) / 1]                                                                                [Stage 10:>                                                         (0 + 2) / 2]                                                                                Running cell 14
+[Stage 10:>                                                         (0 + 2) / 2]                                                                                Running cell 14
 Running cell 15
-[Stage 24:>                                                         (0 + 2) / 2]                                                                                Running cell 16
+Running cell 16
 Running cell 17
 Running cell 18
 Running cell 19
 Wrote file to autograder_result/q7.cell
 Waiting for file autograder_result/q7.cell to be removed
-23/11/22 05:31:41 WARN ChannelPool: [s0|p6-db-2/172.28.0.3:9042]  Error while opening new channel (ConnectionInitException: [s0|connecting...] Protocol initialization request, step 1 (STARTUP {CQL_VERSION=3.0.0, DRIVER_NAME=DataStax Java driver for Apache Cassandra(R), DRIVER_VERSION=4.13.0, CLIENT_ID=42d814e8-8c95-4a18-a452-f215faa37d51, APPLICATION_NAME=Spark-Cassandra-Connector-local-1700631003739}): failed to send request (java.nio.channels.NotYetConnectedException))
-23/11/22 05:31:48 WARN ChannelPool: [s0|p6-db-2/172.28.0.3:9042]  Error while opening new channel (ConnectionInitException: [s0|connecting...] Protocol initialization request, step 1 (STARTUP {CQL_VERSION=3.0.0, DRIVER_NAME=DataStax Java driver for Apache Cassandra(R), DRIVER_VERSION=4.13.0, CLIENT_ID=42d814e8-8c95-4a18-a452-f215faa37d51, APPLICATION_NAME=Spark-Cassandra-Connector-local-1700631003739}): failed to send request (java.nio.channels.NotYetConnectedException))
-23/11/22 05:31:56 WARN ChannelPool: [s0|p6-db-2/172.28.0.3:9042]  Error while opening new channel (ConnectionInitException: [s0|connecting...] Protocol initialization request, step 1 (STARTUP {CQL_VERSION=3.0.0, DRIVER_NAME=DataStax Java driver for Apache Cassandra(R), DRIVER_VERSION=4.13.0, CLIENT_ID=42d814e8-8c95-4a18-a452-f215faa37d51, APPLICATION_NAME=Spark-Cassandra-Connector-local-1700631003739}): failed to send request (java.nio.channels.NotYetConnectedException))
+23/11/22 06:33:31 WARN ChannelPool: [s0|p6-db-2/172.28.0.4:9042]  Error while opening new channel (ConnectionInitException: [s0|connecting...] Protocol initialization request, step 1 (STARTUP {CQL_VERSION=3.0.0, DRIVER_NAME=DataStax Java driver for Apache Cassandra(R), DRIVER_VERSION=4.13.0, CLIENT_ID=eab40be0-fc5d-4708-98e4-94ceccfcb0dc, APPLICATION_NAME=Spark-Cassandra-Connector-local-1700634720635}): failed to send request (java.nio.channels.NotYetConnectedException))
+23/11/22 06:33:38 WARN ChannelPool: [s0|p6-db-2/172.28.0.4:9042]  Error while opening new channel (ConnectionInitException: [s0|connecting...] Protocol initialization request, step 1 (STARTUP {CQL_VERSION=3.0.0, DRIVER_NAME=DataStax Java driver for Apache Cassandra(R), DRIVER_VERSION=4.13.0, CLIENT_ID=eab40be0-fc5d-4708-98e4-94ceccfcb0dc, APPLICATION_NAME=Spark-Cassandra-Connector-local-1700634720635}): failed to send request (java.nio.channels.NotYetConnectedException))
+23/11/22 06:33:47 WARN ChannelPool: [s0|p6-db-2/172.28.0.4:9042]  Error while opening new channel (ConnectionInitException: [s0|connecting...] Protocol initialization request, step 1 (STARTUP {CQL_VERSION=3.0.0, DRIVER_NAME=DataStax Java driver for Apache Cassandra(R), DRIVER_VERSION=4.13.0, CLIENT_ID=eab40be0-fc5d-4708-98e4-94ceccfcb0dc, APPLICATION_NAME=Spark-Cassandra-Connector-local-1700634720635}): failed to send request (java.nio.channels.NotYetConnectedException))
 File autograder_result/q7.cell has been removed
 Running cell 20
 Running cell 21
 Running cell 22
 Running cell 23
-23/11/22 05:32:10 WARN UncaughtExceptions: Uncaught exception in scheduled task (CompletionException: java.util.concurrent.RejectedExecutionException: event executor terminated)
-23/11/22 05:32:10 WARN JavaUtils: Attempt to delete using native Unix OS command failed for path = /tmp/blockmgr-e880017e-0b43-46cc-b0b3-010399903e13. Falling back to Java IO way
-java.io.IOException: Failed to delete: /tmp/blockmgr-e880017e-0b43-46cc-b0b3-010399903e13
-	at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingUnixNative(JavaUtils.java:177)
-	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:113)
-	at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:94)
-	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1231)
-	at org.apache.spark.storage.DiskBlockManager.$anonfun$doStop$1(DiskBlockManager.scala:368)
-	at org.apache.spark.storage.DiskBlockManager.$anonfun$doStop$1$adapted(DiskBlockManager.scala:364)
-	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
-	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
-	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
-	at org.apache.spark.storage.DiskBlockManager.doStop(DiskBlockManager.scala:364)
-	at org.apache.spark.storage.DiskBlockManager.stop(DiskBlockManager.scala:359)
-	at org.apache.spark.storage.BlockManager.stop(BlockManager.scala:2052)
-	at org.apache.spark.SparkEnv.stop(SparkEnv.scala:95)
-	at org.apache.spark.SparkContext.$anonfun$stop$25(SparkContext.scala:2175)
-	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1509)
-	at org.apache.spark.SparkContext.stop(SparkContext.scala:2175)
-	at org.apache.spark.SparkContext.stop(SparkContext.scala:2081)
-	at org.apache.spark.SparkContext.$anonfun$new$31(SparkContext.scala:664)
-	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
-	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:2088)
-	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
-	at scala.util.Try$.apply(Try.scala:213)
-	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
-	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:750)
+Running cell 24
+23/11/22 06:33:59 WARN UncaughtExceptions: Uncaught exception in scheduled task (CompletionException: java.util.concurrent.RejectedExecutionException: event executor terminated)
